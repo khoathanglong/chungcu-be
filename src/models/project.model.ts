@@ -86,7 +86,7 @@ export class Project extends Entity {
 
 export interface ProjectRelations {
   // describe navigational properties here
-  comments?: CommentWithRelations;
+  comments?: CommentWithRelations[];
 }
 
 export type ProjectWithRelations = Project & ProjectRelations;

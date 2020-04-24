@@ -1,4 +1,5 @@
 import {Entity, hasMany, model, property} from '@loopback/repository';
+import {ProjectWithRelations} from './project.model';
 import {ReplyComment, ReplyCommentWithRelations} from './reply-comment.model';
 
 @model({
@@ -57,7 +58,8 @@ export class Comment extends Entity {
 
 export interface CommentRelations {
   // describe navigational properties here
-  replyComments?: ReplyCommentWithRelations;
+  replyComments?: ReplyCommentWithRelations[];
+  projectId?: ProjectWithRelations;
 }
 
 export type CommentWithRelations = Comment & CommentRelations;
