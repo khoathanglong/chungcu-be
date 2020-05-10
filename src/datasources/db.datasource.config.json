@@ -5,6 +5,6 @@
   "host": "localhost",
   "port": 5432,
   "user": "postgres",
-  "password": "super@dmin@2020",
+  "password": "admin",
   "database": "postgres"
 }

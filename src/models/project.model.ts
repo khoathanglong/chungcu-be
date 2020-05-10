@@ -26,6 +26,12 @@ export class Project extends Entity {
     type: 'string',
     required: true,
   })
+  cityCode: string;
+
+  @property({
+    type: 'string',
+    required: true,
+  })
   district: string;
 
   @property({
@@ -52,7 +58,7 @@ export class Project extends Entity {
     type: 'boolean',
     default: false,
   })
-  verified?: boolean;
+  isVerified?: boolean;
 
   @property({
     type: 'string',
@@ -75,6 +81,22 @@ export class Project extends Entity {
     defaultFn: 'now',
   })
   createdAt: string;
+
+  @property({
+    type: 'number',
+    postgresql: {
+      dataType: 'DECIMAL',
+    },
+  })
+  lat?: number;
+
+  @property({
+    type: 'number',
+    postgresql: {
+      dataType: 'DECIMAL',
+    },
+  })
+  lng?: number;
 
   @hasMany(() => Comment)
   comments: Comment[];
