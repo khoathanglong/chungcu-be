@@ -54,7 +54,7 @@
     "@loopback/rest-crud": "^0.8.0",
     "@loopback/rest-explorer": "^2.1.0",
     "@loopback/service-proxy": "^2.1.0",
-    "loopback-connector-postgresql": "^3.9.1",
+    "loopback-connector-postgresql": "^5.5.1",
     "tslib": "^1.10.0"
   },
   "devDependencies": {
